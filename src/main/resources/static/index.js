@@ -114,3 +114,9 @@ function formater(data) {
 
     $("#billetter").html(table);
 }
+
+$(document).ready(function() {
+    $.get("/hent", function (data) {
+        formater(data);
+    });
+});
