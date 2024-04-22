@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <script src="jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+<h1>Bestilling av kinobiletter</h1>
+
+<label for="film">Velg film:</label>
+<select name="film" id="film">
+    <option value="velg">Velg film her</option>
+    <option value="film1">Film 1</option>
+    <option value="film2">Film 2</option>
+    <option value="film3">Film 3</option>
+</select>
+<label for="film" id="filmError"></label>
+
+<br/> <br/>
+
+<label for="antall">Antall:</label>
+<input type="number" id="antall">
+<label for="antall" id="antallError"></label>
+<br/> <br/>
+
+<label for="fornavn">Fornavn:</label>
+<input type="text" id="fornavn">
+<label for="antall" id="fornavnError"></label>
+<br/> <br/>
+
+<label for="etternavn">Etternavn:</label>
+<input type="text" id="etternavn">
+<label for="antall" id="etternavnError"></label>
+<br/> <br/>
+
+<label for="telefon">Telefonnr:</label>
+<input type="text" id="telefon">
+<label for="antall" id="telefonError"></label>
+<br/> <br/>
+
+<label for="epost">Epost:</label>
+<input type="text" id="epost">
+<label for="antall" id="epostError"></label>
+<br/> <br/>
+
+<button type="submit" id="kjop">Kjøp billett</button>
+
+<br/> <br/>
+
+<h2>Alle billetter</h2>
+<div id="billetter">
+    <table>
+        <tr>
+            <th>Film</th>
+            <th>Antall</th>
+            <th>Fornavn</th>
+            <th>Etternavn</th>
+            <th>Telefon</th>
+            <th>Epost</th>
+        </tr>
+    </table>
+</div>
+
+<br/>
+<button type="submit" id="slett">Slett alle billettene</button>
+
+
+<script src="index.js"></script>
+</body>
+</html>
