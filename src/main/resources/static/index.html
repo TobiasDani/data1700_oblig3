@@ -6,70 +6,86 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="jquery-3.7.1.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 </head>
 
 <body>
-<h1>Bestilling av kinobiletter</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form>
+                <h1>Bestilling av kinobiletter</h1>
 
-<label for="film">Velg film:</label>
-<select name="film" id="film">
-    <option value="velg">Velg film her</option>
-    <option value="film1">Film 1</option>
-    <option value="film2">Film 2</option>
-    <option value="film3">Film 3</option>
-</select>
-<label for="film" id="filmError"></label>
+                <div class="form-group">
+                    <label for="film">Velg film:</label>
+                    <select class="form-control" name="film" id="film">
+                        <option value="velg">Velg film her</option>
+                        <option value="film1">Film 1</option>
+                        <option value="film2">Film 2</option>
+                        <option value="film3">Film 3</option>
+                    </select>
+                    <label for="film" id="filmError"></label>
+                </div>
 
-<br/> <br/>
+                <div class="form-group">
+                    <label for="antall">Antall:</label>
+                    <input type="number" class="form-control" id="antall">
+                    <label for="antall" id="antallError"></label>
+                </div>
 
-<label for="antall">Antall:</label>
-<input type="number" id="antall">
-<label for="antall" id="antallError"></label>
-<br/> <br/>
+                <div class="form-group">
+                    <label for="fornavn">Fornavn:</label>
+                    <input type="text" class="form-control" id="fornavn">
+                    <label for="fornavn" id="fornavnError"></label>
+                </div>
 
-<label for="fornavn">Fornavn:</label>
-<input type="text" id="fornavn">
-<label for="antall" id="fornavnError"></label>
-<br/> <br/>
+                <div class="form-group">
+                    <label for="etternavn">Etternavn:</label>
+                    <input type="text" class="form-control" id="etternavn">
+                    <label for="etternavn" id="etternavnError"></label>
+                </div>
 
-<label for="etternavn">Etternavn:</label>
-<input type="text" id="etternavn">
-<label for="antall" id="etternavnError"></label>
-<br/> <br/>
+                <div class="form-group">
+                    <label for="telefon">Telefonnr:</label>
+                    <input type="text" class="form-control" id="telefon">
+                    <label for="telefon" id="telefonError"></label>
+                </div>
 
-<label for="telefon">Telefonnr:</label>
-<input type="text" id="telefon">
-<label for="antall" id="telefonError"></label>
-<br/> <br/>
+                <div class="form-group">
+                    <label for="epost">Epost:</label>
+                    <input type="text" class="form-control" id="epost">
+                    <label for="epost" id="epostError"></label>
+                </div>
 
-<label for="epost">Epost:</label>
-<input type="text" id="epost">
-<label for="antall" id="epostError"></label>
-<br/> <br/>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" id="kjop">Kjøp billett</button>
+                </div>
 
-<button type="submit" id="kjop">Kjøp billett</button>
+                <h2>Alle billetter</h2>
 
-<br/> <br/>
+                <div id="billetter">
+                    <table class="table">
+                        <tr>
+                            <th>Film</th>
+                            <th>Antall</th>
+                            <th>Fornavn</th>
+                            <th>Etternavn</th>
+                            <th>Telefon</th>
+                            <th>Epost</th>
+                        </tr>
+                    </table>
+                </div>
 
-<h2>Alle billetter</h2>
-<div id="billetter">
-    <table>
-        <tr>
-            <th>Film</th>
-            <th>Antall</th>
-            <th>Fornavn</th>
-            <th>Etternavn</th>
-            <th>Telefon</th>
-            <th>Epost</th>
-        </tr>
-    </table>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" id="slett">Slett alle billettene</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
 </div>
-
-<br/>
-<button type="submit" id="slett">Slett alle billettene</button>
-
 
 <script src="index.js"></script>
 </body>

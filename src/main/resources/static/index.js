@@ -97,7 +97,7 @@ $("#slett").click(function slettAlt() {
 
 
 function formater(data) {
-    let table = "<table><tr><th>Film</th><th>Antall</th><th>Fornavn</th><th>Etternavn</th><th>Telefon</th><th>Epost</th></tr>";
+    let table = "<table class=\"table\"><tr><th>Film</th><th>Antall</th><th>Fornavn</th><th>Etternavn</th><th>Telefon</th><th>Epost</th></tr>";
 
     data.forEach(function (b) {
         var row = "<tr>";
