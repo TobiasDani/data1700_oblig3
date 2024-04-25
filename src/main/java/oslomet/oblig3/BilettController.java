@@ -19,9 +19,20 @@ public class BilettController {
         rep.lagreBilett(innBilett);
     }
 
+    @PostMapping("rediger")
+    public void redigerBiletter(long id, String film, int antall, String fornavn, String etternavn, String telefon, String epost) {
+        Bilett innBilett = new Bilett(id, film, antall, fornavn, etternavn, telefon, epost);
+        rep.redigerBilett(innBilett);
+    }
+
     @DeleteMapping("slettalt")
     public void slettBiletter() {
         rep.slettAlleBiletter();
+    }
+
+    @DeleteMapping("slettenkel")
+    public void slettEnkelBilett(long id) {
+        rep.slettEnkelBilett(id);
     }
 
     @GetMapping("hent")

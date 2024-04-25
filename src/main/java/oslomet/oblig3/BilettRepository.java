@@ -18,6 +18,11 @@ public class BilettRepository {
         db.update(sql, innBilett.getFilm(), innBilett.getAntall(), innBilett.getFornavn(), innBilett.getEtternavn(), innBilett.getTelefon(), innBilett.getEpost());
     }
 
+    public void redigerBilett(Bilett innBilett) {
+        String sql = "UPDATE Bilett SET film=?, antall=?, fornavn=?, etternavn=?, telefon=?, epost=? WHERE id=?";
+        db.update(sql, innBilett.getFilm(), innBilett.getAntall(), innBilett.getFornavn(), innBilett.getEtternavn(), innBilett.getTelefon(), innBilett.getEpost(), innBilett.getId());
+    }
+
     public List<Bilett> hentAlleBiletter() {
         String sql = "SELECT * FROM Bilett ORDER BY LOWER(etternavn)";
         List<Bilett> alleBiletter = db.query(sql, new BeanPropertyRowMapper<>(Bilett.class));
@@ -27,5 +32,10 @@ public class BilettRepository {
     public void slettAlleBiletter() {
         String sql = "DELETE FROM Bilett";
         db.update(sql);
+    }
+
+    public void slettEnkelBilett(long id) {
+        String sql = "DELETE FROM Bilett WHERE id = ?";
+        db.update(sql, id);
     }
 }
